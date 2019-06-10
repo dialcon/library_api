@@ -1,0 +1,50 @@
+{
+  "name": "fcms",
+  "module_type": "general",
+  "fields": {
+    "fields": {
+      "user_id": {
+        "toObject": "users"
+      },
+      "device_id": {
+        "notEmpty": true,
+        "errorMessage": "deviceIdRequired"
+      },
+      "fcm_id": {
+        "optional": true
+      },
+      "device_type": {
+        "notEmpty": true,
+        "errorMessage": "deviceTypeRequired"
+      },
+      "car_id": {
+        "optional": true
+      },
+      "platform": {
+        "optional": true
+      },
+      "device_brand": {
+        "optional": true
+      },
+      "app_version": {
+        "optional": true
+      }
+    },
+    "fields_type": {
+      "user_id": "TO",
+      "device_id": "S",
+      "fcm_id": "S",
+      "device_type": "S",
+      "car_id": "TO",
+      "platform": "S",
+      "device_brand": "S",
+      "app_version": "S"
+    },
+    "keys": {
+      "user_id": "INDEX",
+      "driver_id": "INDEX",
+      "device_id": "INDEX",
+      "fcm_id": "INDEX"
+    }
+  }
+}

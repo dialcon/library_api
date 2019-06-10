@@ -1,0 +1,44 @@
+{
+  "name": "reservations",
+  "states": [
+    {
+      "name": "created",
+      "next_state": [
+        "reserved",
+        "cancelled"
+      ]
+    },
+    {
+      "name": "reserved",
+      "next_state": [
+        "started",
+        "cancelled"
+      ]
+    },
+    {
+      "name": "started",
+      "next_state": [
+        "finished"
+      ]
+    },
+    {
+      "name": "finished",
+      "next_state": [
+        "normalized",
+        "notReturned"
+      ]
+    },
+    {
+      "name": "normalized",
+      "next_state": []
+    },
+    {
+      "name": "notReturned",
+      "next_state": []
+    },
+    {
+      "name": "cancelled",
+      "next_state": []
+    }
+  ]
+}

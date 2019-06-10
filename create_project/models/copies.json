@@ -1,0 +1,47 @@
+{
+  "name": "copies",
+  "module_type": "general",
+  "fields": {
+    "fields": {
+      "book_id": {
+        "toObject": "books",
+        "notEmpty": true,
+        "errorMessage": "bookIdRequired"
+      },
+      "status": {
+        "notEmpty": true,
+        "errorMessage": "statusRequired",
+        "matches": {
+          "options": [
+            {
+              "pattern": "(disponible|prestado|perdido|dañado)"
+            }
+          ],
+          "errorMessage": "statusNotValid"
+        }
+      },
+      "scdd_code": {
+        "notEmpty": true,
+        "errorMessage": "scddRequired"
+      },
+      "acquisition_date": {
+        "notEmpty": true,
+        "errorMessage": "acquisitionDateRequired",
+        "isDate": {
+          "errorMessage": "acquisitionDateMustBeDate"
+        }
+      }
+    },
+    "fields_type": {
+      "book_id": "TO",
+      "status": "S",
+      "scdd_code": "S",
+      "acquisition_date": "D"
+    },
+    "keys": {
+      "book_id": "INDEX",
+      "scdd_code": "UNIQUE",
+      "status": "INDEX"
+    }
+  }
+}

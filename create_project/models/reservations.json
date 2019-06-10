@@ -1,0 +1,46 @@
+{
+  "name": "reservations",
+  "module_type": "general",
+  "fields": {
+    "fields": {
+      "copy_id": {
+        "toObject": "copies",
+        "notEmpty": true,
+        "errorMessage": "copyIdRequired"
+      },
+      "requester_id": {
+        "toObject": "users",
+        "notEmpty": true,
+        "errorMessage": "requesterIdRequired"
+      },
+      "status": {
+        "notEmpty": true,
+        "state": "reservations",
+        "default": "created"
+      },
+      "start_date": {
+        "isDate": {
+          "errorMessage": "startDateMustBeDate"
+        }
+      },
+      "end_date": {
+        "isDate": {
+          "errorMessage": "endDateMustBeDate"
+        }
+      }
+    },
+    "fields_type": {
+      "copy_id": "TO",
+      "status": "M",
+      "start_date": "D",
+      "requester_id": "TO",
+      "end_date": "D"
+    },
+    "keys": {
+      "copy_id": "INDEX",
+      "requester_id": "INDEX",
+      "start_date": "INDEX",
+      "end_date": "INDEX"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "create-project-clicktast",
+  "version": "1.0.0",
+  "description": "Se encuentran todos los pasos para crear el proyecto de forma local y sus datos predefinidos",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "async": "",
+    "colors": "^1.3.1",
+    "request": ""
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "7.0.0"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "library_api",
+  "version": "1.0.0",
+  "description": "api for handle a library, to the \"Reto Técnico Full Stack Inalambria\"",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "dialcon@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "apicache": "^1.2.0",
+    "async": "",
+    "body-parser": "",
+    "compression": "",
+    "cookie-parser": "",
+    "cron": "1.2.1",
+    "crypto": "^1.0.1",
+    "date-holidays": "^1.4.0",
+    "express": "",
+    "express-device": "^0.4.2",
+    "express-validator": "",
+    "i18n": "",
+    "jsonwebtoken": "",
+    "lodash": "",
+    "moment": "",
+    "morgan": "",
+    "moment-timezone": "",
+    "redis": "",
+    "redlock": "^3.1.2",
+    "request": "",
+    "uuid": "^3.2.1"
+  }
+}

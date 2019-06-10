@@ -1,0 +1,54 @@
+{
+  "name": "books",
+  "module_type": "general",
+  "fields": {
+    "fields": {
+      "title": {
+        "notEmpty": true,
+        "errorMessage": "titleRequired"
+      },
+      "isbn": {
+        "notEmpty": true,
+        "errorMessage": "isbnRequired"
+      },
+      "autor": {
+        "notEmpty": true,
+        "errorMessage": "autorRequired"
+      },
+      "year": {
+        "notEmpty": true,
+        "errorMessage": "infoYearRequired"
+      },
+      "category": {
+        "matches": {
+          "options": [
+            {
+              "pattern": "(artes|literatura|biografia|cocina|ciencia)"
+            }
+          ],
+          "errorMessage": "categoryNotValid"
+        },
+        "notEmpty": true,
+        "errorMessage": "categoryRequired"
+      },
+      "publisher": {
+        "notEmpty": true,
+        "errorMessage": "publisherRequired"
+      }
+    },
+    "fields_type": {
+      "title": "S",
+      "autor": "S",
+      "isbn": "S",
+      "category": "S",
+      "year": "S",
+      "publisher": "S"
+    },
+    "keys": {
+      "title": "INDEX",
+      "autor": "INDEX",
+      "isbn": "UNIQUE",
+      "publisher": "INDEX"
+    }
+  }
+}

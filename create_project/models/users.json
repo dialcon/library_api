@@ -1,0 +1,108 @@
+{
+  "name": "users",
+  "module_type": "user",
+  "fields": {
+    "fields": {
+      "email": {
+        "notEmpty": true,
+        "errorMessage": "emailRequired",
+        "isEmail": {
+          "errorMessage": "emailNotValid"
+        }
+      },
+      "password": {
+        "notEmpty": true,
+        "errorMessage": "passwordRequired",
+        "isLength": {
+          "options": [
+            {
+              "min": 6
+            }
+          ],
+          "errorMessage": "passwordMinLen"
+        }
+      },
+      "password_temp": {
+        "optional": true,
+        "isLength": {
+          "options": [
+            {
+              "min": 6
+            }
+          ],
+          "errorMessage": "passwordMinLen"
+        }
+      },
+      "type_user": {
+        "notEmpty": true,
+        "default": "user",
+        "errorMessage": "typeUserRequired",
+        "matches": {
+          "options": [
+            {
+              "pattern": "(user|admin)"
+            }
+          ],
+          "errorMessage": "typeUserIsInvalid"
+        }
+      },
+      "personal_info": {
+        "object": true
+      },
+      "personal_info-firstname": {
+        "notEmpty": true,
+        "errorMessage": "personalInfoFirstnameRequired"
+      },
+      "personal_info-lastname": {
+        "notEmpty": true,
+        "errorMessage": "personalInfoLastnameRequired"
+      },
+      "personal_info-phone": {
+        "notEmpty": true,
+        "errorMessage": "personalInfoPhoneRequired"
+      },
+      "personal_info-phone_country": {
+        "notEmpty": true,
+        "default": "CO",
+        "errorMessage": "personalInfoPhoneCountryRequired"
+      },
+      "personal_info-image": {
+        "notEmpty": true,
+        "errorMessage": "personalInfoImage"
+      },
+      "identification_document": {
+        "notEmpty": true,
+        "errorMessage": "identificationDocumentRequired"
+      },
+      "identification_document-type": {
+        "notEmpty": true,
+        "errorMessage": "identificationTypeRequired"
+      },
+      "identification_document-number": {
+        "notEmpty": true,
+        "errorMessage": "identificationNumberRequired"
+      }
+    },
+    "fields_type": {
+      "email": "S",
+      "password": "S",
+      "password_temp": "S",
+      "type_user": "S",
+      "personal_info": "O",
+      "personal_info-firstname": "S",
+      "personal_info-lastname": "S",
+      "personal_info-phone": "S",
+      "personal_info-phone_country": "S",
+      "personal_info-image": "S",
+      "identification_document": "O",
+      "identification_document-type": "S",
+      "identification_document-number": "S"
+    },
+    "keys": {
+      "email": "UNIQUE",
+      "alliance_id": "INDEX",
+      "costs_centers_ids": "INDEX",
+      "identification_document-number": "UNIQUE"
+    }
+  }
+}

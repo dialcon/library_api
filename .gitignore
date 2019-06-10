@@ -1,0 +1,51 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+prod.sh
+test.sh
+test.js
+
+pids
+logs
+results
+tmp
+coverage
+
+# API keys
+.env
+
+# Dependency directory
+node_modules
+bower_components
+
+# Editors
+.idea
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDE metadada
+.vscode
+import/log.txt
+dump.rdb
+
+#locales
+locales
+
+# archivos generados en excel
+/public/docs/*
+package-lock.json
+
+#arreglo de trips
+/sites/admin/controllers/rescue/trips/*
+/sites/admin/controllers/rescue/nov/*
+/sites/admin/controllers/rescue/xnov/*
+/sites/admin/controllers/rescue/xxx/*
